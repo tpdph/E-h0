@@ -1,0 +1,37 @@
+{
+  "assistant": {
+    "uploadFiles": "Upload your files",
+    "dragAndDrop": "Drag and drop files here or click to browse",
+    "voice": {
+      "tipsTitle": "Voice Assistant Tips",
+      "tip1": "Speak clearly and at a normal pace",
+      "tip2": "Use natural language and complete sentences",
+      "tip3": "You can ask questions or give commands",
+      "tip4": "Wait for the assistant to finish speaking before responding",
+      "scanQR": "Scan QR Code",
+      "scanInstructions": "Scan this QR code with your mobile device to continue the conversation"
+    }
+  },
+  "knowledge": {
+    "title": "Knowledge Base",
+    "processingTitle": "Processing Files",
+    "processingDescription": "Your files are being analyzed and processed",
+    "uploadInstructions": "Upload documents to enhance your assistant's knowledge"
+  },
+  "cantera": {
+    "title": "Cantera Repository",
+    "voices": "Voice Collection",
+    "voicesDescription": "Select from our curated collection of voices",
+    "avatars": "Avatar Collection",
+    "avatarsDescription": "Choose your preferred avatar",
+    "select": "Select",
+    "selected": "Selected",
+    "preview": "Preview Voice"
+  },
+  "common": {
+    "clear": "Clear All",
+    "process": "Process Files",
+    "selectFiles": "Select Files",
+    "addMore": "Add More Files"
+  }
+}

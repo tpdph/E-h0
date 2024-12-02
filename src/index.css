@@ -1,0 +1,305 @@
+@import '@fontsource/inter';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default theme variables */
+  :root {
+    color-scheme: dark;
+    
+    /* Default theme (purple) */
+    --bg-primary: theme('colors.purple.bg-primary');
+    --bg-secondary: theme('colors.purple.bg-secondary');
+    --bg-tertiary: theme('colors.purple.bg-tertiary');
+    --accent-primary: theme('colors.purple.accent-primary.from');
+    --accent-secondary: theme('colors.purple.accent-secondary.from');
+    --accent-hover: theme('colors.purple.accent-hover');
+    --text-primary: theme('colors.purple.text-primary');
+    --text-secondary: theme('colors.purple.text-secondary');
+    --text-tertiary: theme('colors.purple.text-tertiary');
+    --border-primary: theme('colors.purple.border-primary');
+    --border-secondary: theme('colors.purple.border-secondary');
+    --shadow-glow: theme('colors.purple.glow');
+    --accent-gradient: linear-gradient(
+      to right,
+      theme('colors.purple.accent-primary.from'),
+      theme('colors.purple.accent-primary.via'),
+      theme('colors.purple.accent-primary.to')
+    );
+    --accent-secondary-gradient: linear-gradient(
+      45deg,
+      theme('colors.purple.accent-secondary.from'),
+      theme('colors.purple.accent-secondary.to')
+    );
+  }
+
+  /* Theme variations */
+  .theme-crimson {
+    --bg-primary: theme('colors.crimson.bg-primary');
+    --bg-secondary: theme('colors.crimson.bg-secondary');
+    --bg-tertiary: theme('colors.crimson.bg-tertiary');
+    --accent-primary: theme('colors.crimson.accent-primary.from');
+    --accent-secondary: theme('colors.crimson.accent-secondary.from');
+    --accent-hover: theme('colors.crimson.accent-hover');
+    --text-primary: theme('colors.crimson.text-primary');
+    --text-secondary: theme('colors.crimson.text-secondary');
+    --text-tertiary: theme('colors.crimson.text-tertiary');
+    --border-primary: theme('colors.crimson.border-primary');
+    --border-secondary: theme('colors.crimson.border-secondary');
+    --shadow-glow: theme('colors.crimson.glow');
+    --accent-gradient: linear-gradient(
+      to right,
+      theme('colors.crimson.accent-primary.from'),
+      theme('colors.crimson.accent-primary.via'),
+      theme('colors.crimson.accent-primary.to')
+    );
+    --accent-secondary-gradient: linear-gradient(
+      45deg,
+      theme('colors.crimson.accent-secondary.from'),
+      theme('colors.crimson.accent-secondary.to')
+    );
+  }
+
+  .theme-mono {
+    --bg-primary: theme('colors.mono.bg-primary');
+    --bg-secondary: theme('colors.mono.bg-secondary');
+    --bg-tertiary: theme('colors.mono.bg-tertiary');
+    --accent-primary: theme('colors.mono.accent-primary.from');
+    --accent-secondary: theme('colors.mono.accent-secondary.from');
+    --accent-hover: theme('colors.mono.accent-hover');
+    --text-primary: theme('colors.mono.text-primary');
+    --text-secondary: theme('colors.mono.text-secondary');
+    --text-tertiary: theme('colors.mono.text-tertiary');
+    --border-primary: theme('colors.mono.border-primary');
+    --border-secondary: theme('colors.mono.border-secondary');
+    --shadow-glow: theme('colors.mono.glow');
+    --accent-gradient: linear-gradient(
+      to right,
+      theme('colors.mono.accent-primary.from'),
+      theme('colors.mono.accent-primary.via'),
+      theme('colors.mono.accent-primary.to')
+    );
+    --accent-secondary-gradient: linear-gradient(
+      45deg,
+      theme('colors.mono.accent-secondary.from'),
+      theme('colors.mono.accent-secondary.to')
+    );
+  }
+
+  .theme-neon {
+    --bg-primary: theme('colors.neon.bg-primary');
+    --bg-secondary: theme('colors.neon.bg-secondary');
+    --bg-tertiary: theme('colors.neon.bg-tertiary');
+    --accent-primary: theme('colors.neon.accent-primary.from');
+    --accent-secondary: theme('colors.neon.accent-secondary.from');
+    --accent-hover: theme('colors.neon.accent-hover');
+    --text-primary: theme('colors.neon.text-primary');
+    --text-secondary: theme('colors.neon.text-secondary');
+    --text-tertiary: theme('colors.neon.text-tertiary');
+    --border-primary: theme('colors.neon.border-primary');
+    --border-secondary: theme('colors.neon.border-secondary');
+    --shadow-glow: theme('colors.neon.glow.pink');
+    --accent-gradient: linear-gradient(
+      to right,
+      theme('colors.neon.accent-primary.from'),
+      theme('colors.neon.accent-primary.via'),
+      theme('colors.neon.accent-primary.to')
+    );
+    --accent-secondary-gradient: linear-gradient(
+      45deg,
+      theme('colors.neon.accent-secondary.from'),
+      theme('colors.neon.accent-secondary.to')
+    );
+  }
+
+  .theme-ocean {
+    --bg-primary: theme('colors.ocean.bg-primary');
+    --bg-secondary: theme('colors.ocean.bg-secondary');
+    --bg-tertiary: theme('colors.ocean.bg-tertiary');
+    --accent-primary: theme('colors.ocean.accent-primary.from');
+    --accent-secondary: theme('colors.ocean.accent-secondary.from');
+    --accent-hover: theme('colors.ocean.accent-hover');
+    --text-primary: theme('colors.ocean.text-primary');
+    --text-secondary: theme('colors.ocean.text-secondary');
+    --text-tertiary: theme('colors.ocean.text-tertiary');
+    --border-primary: theme('colors.ocean.border-primary');
+    --border-secondary: theme('colors.ocean.border-secondary');
+    --shadow-glow: theme('colors.ocean.glow');
+    --accent-gradient: linear-gradient(
+      to right,
+      theme('colors.ocean.accent-primary.from'),
+      theme('colors.ocean.accent-primary.via'),
+      theme('colors.ocean.accent-primary.to')
+    );
+    --accent-secondary-gradient: linear-gradient(
+      45deg,
+      theme('colors.ocean.accent-secondary.from'),
+      theme('colors.ocean.accent-secondary.to')
+    );
+  }
+
+  /* Light mode overrides - preserve theme accents */
+  .light {
+    --bg-primary: theme('colors.gray.50');
+    --bg-secondary: theme('colors.white');
+    --bg-tertiary: theme('colors.gray.100');
+    --text-primary: theme('colors.gray.900');
+    --text-secondary: theme('colors.gray.700');
+    --text-tertiary: theme('colors.gray.500');
+    --border-primary: theme('colors.gray.200');
+    --border-secondary: theme('colors.gray.300');
+  }
+
+  /* Light mode theme-specific overrides */
+  .light.theme-neon {
+    --shadow-glow: theme('colors.neon.glow.blue');
+  }
+
+  .light.theme-ocean {
+    --shadow-glow: theme('colors.ocean.glow');
+  }
+
+  /* Base styles */
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  /* Theme transition utilities */
+  .theme-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .theme-transition-bg {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  .theme-transition-transform {
+    @apply transition-transform duration-300 ease-in-out;
+  }
+
+  .theme-transition-opacity {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+}
+
+@layer components {
+  /* Base Components */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium 
+           transition-all duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--accent-primary)];
+  }
+
+  .btn-primary {
+    @apply text-white bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] 
+           shadow-sm hover:shadow-lg
+           hover:brightness-110 theme-transition;
+  }
+
+  .btn-secondary {
+    @apply bg-[var(--bg-tertiary)] text-[var(--text-primary)] 
+           border border-[var(--border-primary)]
+           hover:bg-[var(--bg-secondary)] hover:border-[var(--border-secondary)]
+           theme-transition;
+  }
+
+  .btn-ghost {
+    @apply text-[var(--text-secondary)] hover:text-[var(--text-primary)] 
+           hover:bg-[var(--bg-tertiary)] theme-transition;
+  }
+
+  /* Navigation Components */
+  .nav-item {
+    @apply flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-secondary)]
+           hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]
+           theme-transition;
+  }
+
+  .nav-item.active {
+    @apply bg-[var(--bg-tertiary)] text-[var(--text-primary)];
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-[var(--bg-secondary)] border border-[var(--border-primary)] 
+           rounded-xl p-4 backdrop-blur-sm bg-opacity-80 
+           hover:border-[var(--border-secondary)] hover:shadow-lg 
+           hover:-translate-y-0.5
+           theme-transition;
+  }
+
+  /* Chat Components */
+  .chat-bubble {
+    @apply max-w-[80%] rounded-2xl px-6 py-4 shadow-sm theme-transition;
+  }
+
+  .chat-bubble-user {
+    @apply chat-bubble ml-auto text-white 
+           bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)];
+  }
+
+  .chat-bubble-assistant {
+    @apply chat-bubble bg-[var(--bg-tertiary)] text-[var(--text-primary)];
+  }
+
+  /* Loading States */
+  .loading {
+    @apply animate-pulse bg-[var(--bg-tertiary)] rounded-lg;
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Effect Utilities */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r 
+           from-[var(--accent-primary)] to-[var(--accent-secondary)];
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-opacity-80;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--bg-secondary)] theme-transition-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--border-primary)] rounded-full 
+         hover:bg-[var(--border-secondary)]
+         theme-transition-bg;
+}
+
+/* Focus Styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-[var(--accent-primary)] 
+         ring-offset-2 ring-offset-[var(--bg-primary)]
+         theme-transition;
+}
+
+/* Selection Styles */
+::selection {
+  @apply bg-[var(--accent-primary)] bg-opacity-30 text-[var(--text-primary)];
+}
+
+/* Root element styles */
+#root {
+  @apply min-h-screen w-full;
+}
